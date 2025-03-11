@@ -14,7 +14,7 @@ L402 simplifies web payments through:
 
 ## Introduction
 
-*L402 makes payments a core part of HTTP interactions by leveraging the HTTP 402 status code*
+_L402 makes payments a core part of HTTP interactions by leveraging the HTTP 402 status code_
 
 The internet's design largely overlooked payments, despite HTTP reserving the 402 "Payment Required" status code. Payment solutions have typically centered around human interactions and checkout flows, which worked for traditional web browsing but present challenges for autonomous systems and AI agents that operate independently through APIs.
 
@@ -24,11 +24,12 @@ L402 addresses this gap by creating a machine-friendly payment protocol. By usin
 
 The L402 protocol streamlines payment handling for HTTP resources through a simple redirect-based flow.
 
-![L402 Simplified Protocol Flow](l402-protocol-flow.svg)
+![Simplified Protocol Flow](s402.drawio.svg)
 
 ### How It Works
 
 1. **Initial Request**
+
    - Client requests an HTTP resource
    - If payment is required, server responds with HTTP 402
    - Response includes a Location header pointing to the payment endpoint
@@ -43,6 +44,7 @@ The L402 protocol streamlines payment handling for HTTP resources through a simp
 ### Headers Specification
 
 1. **Location Header (Required with 402)**
+
    - Points to the payment endpoint URL
    - Example: `Location: https://api.example.com/pay/item-123`
 
@@ -84,7 +86,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "premium_content": "Here is the content you paid for."
+"premium_content": "Here is the content you paid for."
 }
 """
 
@@ -99,6 +101,7 @@ Content-Type: application/json
 ## Contributing
 
 We welcome contributions to L402! Here's how you can get involved:
+
 1. Join our community: Connect with other contributors and stay updated on L402's development by joining our [Discord community](https://discord.gg/2tPYBgWzQm).
 2. Report issues: If you encounter a bug or have a feature request, please open an issue on GitHub.
 3. Submit Pull Requests: If you're ready to contribute code, fork the repository and submit a pull request.
